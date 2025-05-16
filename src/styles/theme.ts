@@ -2,11 +2,15 @@ import {colors} from './tokens';
 
 export const theme = {
   colors: {
-    primary: colors.primary,
-    secondary: colors.secondary,
-    background: colors.background,
-    text: colors.text,
-    error: colors.error,
-    success: colors.success,
+    gray: {
+      100: colors.gray100,
+      200: colors.gray200,
+      300: colors.gray300,
+      400: colors.gray400,
+      500: colors.gray500,
+      600: colors.gray600,
+      700: colors.gray700,
+      800: colors.gray800,
+    },
   },
 };

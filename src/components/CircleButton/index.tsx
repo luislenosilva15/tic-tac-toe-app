@@ -1,13 +1,16 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {TouchableOpacity} from 'react-native';
 
 import * as S from './styles';
+import Icon from '../../icons';
 
 const CircleButton = () => {
   return (
-    <S.Wrapper>
-      <Text>ss</Text>
-    </S.Wrapper>
+    <TouchableOpacity onPress={() => {}}>
+      <S.Wrapper>
+        <Icon name="settings" size={20} />
+      </S.Wrapper>
+    </TouchableOpacity>
   );
 };
 

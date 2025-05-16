@@ -1,8 +1,10 @@
+/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import Home from '../screens/Home';
 
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import CircleButton from '../components/CircleButton';
+import {View} from 'react-native';
 
 export type AppStackParamList = {
   Home: undefined;
@@ -10,6 +12,12 @@ export type AppStackParamList = {
 };
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
+
+const HomeRightButton = () => (
+  <View style={{marginLeft: 72}}>
+    <CircleButton />
+  </View>
+);
 
 const AppNavigator = () => (
   <Stack.Navigator initialRouteName="Home">
@@ -21,7 +29,7 @@ const AppNavigator = () => (
           backgroundColor: '#22272C',
         },
         headerShadowVisible: false,
-        headerRight: () => <CircleButton />,
+        headerRight: HomeRightButton,
       }}
     />
   </Stack.Navigator>
