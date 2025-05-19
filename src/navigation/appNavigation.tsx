@@ -7,13 +7,10 @@ import CircleButton from '../components/CircleButton';
 import {View} from 'react-native';
 import {theme} from '../styles/theme';
 import {useTranslation} from 'react-i18next';
+import SinglePlayer from '../screens/SinglePlayer';
+import {RootStackParamList} from './types';
 
-export type AppStackParamList = {
-  Home: undefined;
-  Profile: {userId: string};
-};
-
-const Stack = createNativeStackNavigator<AppStackParamList>();
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const HomeRightButton = () => (
   <View style={{marginLeft: 84}}>
@@ -39,6 +36,22 @@ const AppNavigator = () => {
           },
           headerShadowVisible: false,
           headerRight: HomeRightButton,
+        }}
+      />
+
+      <Stack.Screen
+        name="SinglePlayer"
+        component={SinglePlayer}
+        options={{
+          title: t('screen.home.title'),
+          headerTitleStyle: {
+            color: theme.colors.gray[300],
+          },
+          headerStyle: {
+            backgroundColor: '#22272C',
+          },
+          headerShadowVisible: false,
+          // headerRight: HomeRightButton,
         }}
       />
     </Stack.Navigator>

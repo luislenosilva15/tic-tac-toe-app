@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal as ModalComponent, Text} from 'react-native';
+import {Modal as ModalComponent} from 'react-native';
 import {Props} from './types';
 
 import * as S from './styles';

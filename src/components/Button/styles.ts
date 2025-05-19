@@ -1,9 +1,10 @@
 import styled from 'styled-components/native';
 import {theme} from '../../styles/theme';
 
-export const Text = styled.Text`
+export const Text = styled.Text<{disabled: boolean}>`
   font-size: 16px;
-  color: ${theme.colors.gray[100]};
+  color: ${({disabled}) =>
+    disabled ? theme.colors.gray[700] : theme.colors.gray[100]};
 `;
 
 export const Wrapper = styled.View<{disabled: boolean}>`

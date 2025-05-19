@@ -7,8 +7,8 @@ import {Props} from './types';
 export default function Button({value, onPress, disabled}: Props) {
   return (
     <TouchableOpacity onPress={onPress} disabled={disabled}>
-      <S.Wrapper disabled={disabled}>
-        <S.Text>{value}</S.Text>
+      <S.Wrapper disabled={!!disabled}>
+        <S.Text disabled={!!disabled}>{value}</S.Text>
       </S.Wrapper>
     </TouchableOpacity>
   );

@@ -30,13 +30,13 @@ export const OptionsWrapper = styled.View`
   flex-direction: row;
 `;
 
-export const SquareOption = styled.View`
+export const SquareOption = styled.View<{borderColor: string}>`
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border-color: ${theme.colors.gray[600]};
+  border-color: ${({borderColor}) => borderColor};
   border-width: 2px;
 `;
