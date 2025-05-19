@@ -9,9 +9,9 @@ import {TouchableOpacity} from 'react-native';
 import Icon from '../../../../icons';
 import Button from '../../../../components/Button';
 
-import {currentGameOptionColor} from '../../../../contants/helpers/home';
 import {NavigationProp, useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from '../../../../navigation/types';
+import {theme} from '../../../../styles/theme';
 
 export default function NewGameModal({isOpen, onClose}: Props) {
   const {t} = useTranslation();
@@ -20,6 +20,9 @@ export default function NewGameModal({isOpen, onClose}: Props) {
   const [gameOption, setGameOption] = useState<GameOption>('none');
 
   const disabledNewGameButton = gameOption === 'none';
+
+  const isCrossOption = gameOption === 'cross';
+  const isCircleOption = gameOption === 'circle';
 
   const handleOnClose = useCallback(() => {
     setGameOption('none');
@@ -39,28 +42,34 @@ export default function NewGameModal({isOpen, onClose}: Props) {
     <Modal isOpen={isOpen} onClose={handleOnClose}>
       <S.ModalContent>
         <S.Header>
-          <CircleButton onPress={handleOnClose} icon="close" />
+          <CircleButton onPress={handleOnClose} icon="cross" />
           <S.HeaderText>{t('screen.home.modal.title')}</S.HeaderText>
         </S.Header>
 
         <S.OptionsWrapper>
           <TouchableOpacity onPress={() => setGameOption('cross')}>
-            <S.SquareOption
-              borderColor={currentGameOptionColor(gameOption, 'cross')}>
+            <S.SquareOption disabled={!isCrossOption}>
               <Icon
-                name="close"
-                color={currentGameOptionColor(gameOption, 'cross')}
+                name="cross"
+                color={
+                  isCrossOption
+                    ? theme.colors.gray[100]
+                    : theme.colors.gray[600]
+                }
                 size={32}
               />
             </S.SquareOption>
           </TouchableOpacity>
 
           <TouchableOpacity onPress={() => setGameOption('circle')}>
-            <S.SquareOption
-              borderColor={currentGameOptionColor(gameOption, 'circle')}>
+            <S.SquareOption disabled={!isCircleOption}>
               <Icon
                 name="circle"
-                color={currentGameOptionColor(gameOption, 'circle')}
+                color={
+                  isCircleOption
+                    ? theme.colors.gray[100]
+                    : theme.colors.gray[600]
+                }
                 size={32}
               />
             </S.SquareOption>

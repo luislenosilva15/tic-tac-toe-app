@@ -1,4 +1,4 @@
-export type Icons = 'settings' | 'close' | 'circle';
+export type Icons = 'settings' | 'cross' | 'circle';
 
 export type IconProps = {
   name: Icons;

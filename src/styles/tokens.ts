@@ -11,4 +11,6 @@ export const colors = {
   background: '#22272C',
   secondary: '#FF00B2',
   secondaryOPAQUE: '#AF5E97',
+  warning0: '#EEFF00',
+  info0: '#15BDFF',
 };

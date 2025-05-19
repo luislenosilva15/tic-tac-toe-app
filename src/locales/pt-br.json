@@ -11,6 +11,10 @@
         "title": "Novo jogo",
         "start": "Iniciar"
       }
+    },
+    "single_player_screen": {
+      "player": "Jogador",
+      "computer": "Computador"
     }
   }
 }

@@ -30,13 +30,14 @@ export const OptionsWrapper = styled.View`
   flex-direction: row;
 `;
 
-export const SquareOption = styled.View<{borderColor: string}>`
+export const SquareOption = styled.View<{disabled: boolean}>`
   width: 60px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border-color: ${({borderColor}) => borderColor};
   border-width: 2px;
+  border-color: ${({disabled}) =>
+    disabled ? theme.colors.gray[600] : theme.colors.gray[100]};
 `;

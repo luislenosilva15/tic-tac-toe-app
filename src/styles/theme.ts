@@ -18,5 +18,11 @@ export const theme = {
       default: colors.secondary,
       opaque: colors.secondaryOPAQUE,
     },
+    warning: {
+      default: colors.warning0,
+    },
+    info: {
+      default: colors.info0,
+    },
   },
 };
