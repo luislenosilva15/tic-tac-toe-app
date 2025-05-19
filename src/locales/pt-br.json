@@ -1,0 +1,16 @@
+{
+  "screen": {
+    "home": {
+      "title": "Jogo da velha",
+      "buttons": {
+        "multiplayer_local": "Multiplayer local",
+        "multiplayer_online": "Online",
+        "singleplayer": "1 jogador"
+      },
+      "modal": {
+        "title": "Novo jogo",
+        "start": "Iniciar"
+      }
+    }
+  }
+}

@@ -11,6 +11,12 @@ export const theme = {
       600: colors.gray600,
       700: colors.gray700,
       800: colors.gray800,
+      900: colors.gray900,
+    },
+    backgroud: colors.background,
+    secondary: {
+      default: colors.secondary,
+      opaque: colors.secondaryOPAQUE,
     },
   },
 };

@@ -1,11 +1,36 @@
-/* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {Text, View} from 'react-native';
+import React, {useState} from 'react';
+
+import * as S from './styles';
+
+import Button from '../../components/Button';
+import {useTranslation} from 'react-i18next';
+import NewGameModal from './components/NewGameModal';
 
 export default function Home() {
+  const {t} = useTranslation();
+
+  const [showNewGameModal, setShowNewGameModal] = useState(false);
+
   return (
-    <View style={{backgroundColor: '#22272C', display: 'flex', flex: 1}}>
-      <Text>Home</Text>
-    </View>
+    <>
+      <S.Wrapper>
+        <S.Image source={require('../../images/png/home.png')} />
+        <S.Buttons>
+          <Button
+            onPress={() => setShowNewGameModal(true)}
+            value={t('screen.home.buttons.singleplayer')}
+          />
+          <Button
+            onPress={() => {}}
+            value={t('screen.home.buttons.multiplayer_local')}
+          />
+        </S.Buttons>
+      </S.Wrapper>
+
+      <NewGameModal
+        isOpen={showNewGameModal}
+        onClose={() => setShowNewGameModal(false)}
+      />
+    </>
   );
 }

@@ -7,4 +7,8 @@ export const colors = {
   gray600: '#6C757D',
   gray700: '#495057',
   gray800: '#343A40',
+  gray900: '#1E2226',
+  background: '#22272C',
+  secondary: '#FF00B2',
+  secondaryOPAQUE: '#AF5E97',
 };

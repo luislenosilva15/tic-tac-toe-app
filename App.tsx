@@ -1,4 +1,5 @@
 import React from 'react';
+import './src/locales/i18n';
 
 import Navigation from './src/navigation';
 
