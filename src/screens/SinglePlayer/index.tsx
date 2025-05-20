@@ -18,8 +18,8 @@ export default function SinglePlayer() {
 
   const {t} = useTranslation();
 
-  const handlePointGame = () => {
-    setGameStatus('opponent_turn');
+  const handlePointGame = (status: GameStatus) => {
+    setGameStatus(status);
   };
 
   return (
@@ -51,7 +51,7 @@ export default function SinglePlayer() {
       </S.HeaderWrapper>
 
       <Game
-        gameOption={currentGameOption as InGameStatus}
+        gamePlayer={currentGameOption as InGameStatus}
         gameStatus={gameStatus}
         pointGame={handlePointGame}
       />
