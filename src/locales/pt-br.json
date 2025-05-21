@@ -5,7 +5,7 @@
       "buttons": {
         "multiplayer_local": "Multiplayer local",
         "multiplayer_online": "Online",
-        "singleplayer": "1 jogador"
+        "singleplayer": "VS IA"
       },
       "modal": {
         "title": "Novo jogo",
@@ -14,7 +14,7 @@
     },
     "single_player_screen": {
       "player": "Jogador",
-      "computer": "Computador"
+      "computer": "IA"
     }
   }
 }
