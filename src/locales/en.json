@@ -1,0 +1,20 @@
+{
+  "screen": {
+    "home": {
+      "title": "Tic-Tac-Toe",
+      "buttons": {
+        "multiplayer_local": "Local Multiplayer",
+        "multiplayer_online": "Online",
+        "singleplayer": "VS AI"
+      },
+      "modal": {
+        "title": "New Game",
+        "start": "Start"
+      }
+    },
+    "single_player_screen": {
+      "player": "Player",
+      "computer": "AI"
+    }
+  }
+}
